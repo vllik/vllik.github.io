@@ -1,0 +1,10 @@
+html {
+    height: 100%;
+    Width: 100%;
+    }
+    
+    h1 {
+    color: black;font-size: medium;font-variant: small-caps;
+    }
+    p {color: black;font-size: smaller;font-variant: small-caps;}
+    h2 {font-variant: small-caps;color: crimson;font-size: medium;}
