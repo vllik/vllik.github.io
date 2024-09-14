@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repeat Text Example</title>
+    <script>
+        function repeatingText(text) {
+            let output = '';
+            for (let i = 0; i < 50; i++) {
+                output += text + "<br>";
+            }
+            document.body.innerHTML = output;
+        }
+    </script>
+</head>
+<body onload="repeatingText('Tämä teksti toistuu...')">
+</body>
+</html>
