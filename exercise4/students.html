@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Confirmation</title>
+    <script>
+        function checkStudentStatus() {
+            // Display a confirm dialog asking if the user is a student
+            let isStudent = confirm("Are you a student?");
+            
+            // If the user clicks OK, isStudent will be true
+            if (isStudent) {
+                document.body.innerHTML = "<h1>Welcome student!</h1>";
+            } 
+            // If the user clicks Cancel, isStudent will be false
+            else {
+                document.body.innerHTML = "<h1>Sorry, this page is for students only.</h1>";
+            }
+        }
+    </script>
+</head>
+<body onload="checkStudentStatus()">
+</body>
+</html>
