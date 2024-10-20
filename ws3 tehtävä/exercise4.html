@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4</title>
+    <style>
+        #coordinates {
+            width: 300px;
+            height: 150px;
+            border: 1px solid #000;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 id="coords">Mouse Coordinates: </h2>
+    <div id="coordinates"></div>
+
+    <script>
+        const divElement = document.getElementById("coordinates");
+        const h2Element = document.getElementById("coords");
+
+        // Add onMouseMove event
+        divElement.onmousemove = function(event) {
+            const x = event.clientX;
+            const y = event.clientY;
+            
+            // Output to console
+            console.log("Mouse Coordinates: X: " + x + ", Y: " + y);
+
+            // Output to the h2 element
+            h2Element.innerHTML = "Mouse Coordinates: X: " + x + ", Y: " + y;
+        };
+    </script>
+
+</body>
+</html>

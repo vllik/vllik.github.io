@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2</title>
+</head>
+<body>
+
+    <h1 id="exerciseHeading">Exercise 2</h1>
+
+    <script>
+        // Access the heading element
+        const heading = document.getElementById("exerciseHeading");
+
+        // Add an onMouseOver event to the heading
+        heading.onmouseover = function() {
+            console.log("Stepped over my a mouse!");
+        };
+
+        // Add a onMouseOut event to the heading
+        heading.onmouseout = function() {
+            alert("Bye bye mouse!");
+        };
+    </script>
+
+</body>
+</html>

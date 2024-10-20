@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3</title>
+    <style>
+        #textdata:focus {
+            background-color: #e0f7fa;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="myForm">
+        <textarea id="textdata"></textarea><br>
+        <span id="charcount">Key presses: 0</span><br>
+        <button type="button" id="submitButton">Send me</button>
+    </form>
+
+    <script>
+        const textarea = document.getElementById("textdata");
+        const charCountSpan = document.getElementById("charcount");
+        let keyPressCount = 0;
+
+        // Add onfocus event
+        textarea.onfocus = function() {
+            alert("Please fill in the form with proper data.");
+            this.style.backgroundColor = "#e0f7fa"; // Change background color
+        };
+
+        // Add onkeydown event
+        textarea.onkeydown = function() {
+            keyPressCount++;
+            charCountSpan.textContent = "Key presses: " + keyPressCount;
+        };
+
+        // Check if the textarea is empty and notify the user
+        document.getElementById("submitButton").onclick = function() {
+            if (textarea.value.trim() === "") {
+                alert("The textarea cannot be empty. Please enter some data.");
+            } else {
+                alert("Form submitted successfully!");
+            }
+        };
+    </script>
+
+</body>
+</html>
